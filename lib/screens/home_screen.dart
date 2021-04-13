@@ -50,7 +50,7 @@ class _HomeScreenMobile extends StatelessWidget {
       controller: scrollController,
       slivers: [
         SliverAppBar(
-          brightness: Brightness.light,
+          brightness : Brightness.light,
           backgroundColor: Colors.white,
           title: Text(
             'facebook',
