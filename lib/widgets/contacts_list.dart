@@ -28,10 +28,12 @@ class ContactsList extends StatelessWidget {
                   ),
                 ),
               ),
+
               Icon(
                 Icons.search,
                 color: Colors.grey[600],
               ),
+
               const SizedBox(width: 8.0),
               Icon(
                 Icons.more_horiz,
@@ -39,6 +41,7 @@ class ContactsList extends StatelessWidget {
               ),
             ],
           ),
+
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(vertical: 10.0),

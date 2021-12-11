@@ -32,7 +32,7 @@ class _NavScreenState extends State<NavScreen> {
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
     return DefaultTabController(
-      length: _icons.length,
+       length: _icons.length,
       child: Scaffold(
         appBar: Responsive.isDesktop(context)
             ? PreferredSize(
@@ -49,6 +49,7 @@ class _NavScreenState extends State<NavScreen> {
           index: _selectedIndex,
           children: _screens,
         ),
+
         bottomNavigationBar: !Responsive.isDesktop(context)
             ? Container(
                 padding: const EdgeInsets.only(bottom: 12.0),

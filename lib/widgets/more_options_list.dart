@@ -35,6 +35,7 @@ class MoreOptionsList extends StatelessWidget {
               child: UserCard(user: currentUser),
             );
           }
+
           final List option = _moreOptionsList[index - 1];
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0),

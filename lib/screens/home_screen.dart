@@ -38,7 +38,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
 class _HomeScreenMobile extends StatelessWidget {
   final TrackingScrollController scrollController;
-
   const _HomeScreenMobile({
     Key key,
     @required this.scrollController,
@@ -61,6 +60,7 @@ class _HomeScreenMobile extends StatelessWidget {
               letterSpacing: -1.2,
             ),
           ),
+
           centerTitle: false,
           floating: true,
           actions: [
@@ -76,15 +76,18 @@ class _HomeScreenMobile extends StatelessWidget {
             ),
           ],
         ),
+
         SliverToBoxAdapter(
           child: CreatePostContainer(currentUser: currentUser),
         ),
+
         SliverPadding(
           padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
           sliver: SliverToBoxAdapter(
             child: Rooms(onlineUsers: onlineUsers),
           ),
         ),
+
         SliverPadding(
           padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
           sliver: SliverToBoxAdapter(
@@ -94,6 +97,7 @@ class _HomeScreenMobile extends StatelessWidget {
             ),
           ),
         ),
+
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (context, index) {
@@ -130,7 +134,9 @@ class _HomeScreenDesktop extends StatelessWidget {
             ),
           ),
         ),
+
         const Spacer(),
+
         Container(
           width: 600.0,
           child: CustomScrollView(
@@ -145,15 +151,18 @@ class _HomeScreenDesktop extends StatelessWidget {
                   ),
                 ),
               ),
+
               SliverToBoxAdapter(
                 child: CreatePostContainer(currentUser: currentUser),
               ),
+
               SliverPadding(
                 padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
                 sliver: SliverToBoxAdapter(
                   child: Rooms(onlineUsers: onlineUsers),
                 ),
               ),
+
               SliverList(
                 delegate: SliverChildBuilderDelegate(
                   (context, index) {
@@ -166,7 +175,9 @@ class _HomeScreenDesktop extends StatelessWidget {
             ],
           ),
         ),
+
         const Spacer(),
+
         Flexible(
           flex: 2,
           child: Align(

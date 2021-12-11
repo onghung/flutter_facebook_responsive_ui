@@ -50,6 +50,7 @@ class PostContainer extends StatelessWidget {
                     child: CachedNetworkImage(imageUrl: post.imageUrl),
                   )
                 : const SizedBox.shrink(),
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: _PostStats(post: post),
@@ -85,6 +86,7 @@ class _PostHeader extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
+
               Row(
                 children: [
                   Text(
@@ -94,6 +96,7 @@ class _PostHeader extends StatelessWidget {
                       fontSize: 12.0,
                     ),
                   ),
+
                   Icon(
                     Icons.public,
                     color: Colors.grey[600],
@@ -135,10 +138,11 @@ class _PostStats extends StatelessWidget {
               ),
               child: const Icon(
                 Icons.thumb_up,
-                size: 10.0,
+                size: 10,
                 color: Colors.white,
               ),
             ),
+
             const SizedBox(width: 4.0),
             Expanded(
               child: Text(
@@ -177,13 +181,11 @@ class _PostStats extends StatelessWidget {
             ),
             _PostButton(
               icon: Icon(
-                MdiIcons.commentOutline,
-                color: Colors.grey[600],
-                size: 20.0,
+                MdiIcons.commentOutline, color: Colors.grey[600], size: 20.0,
               ),
-              label: 'Comment',
-              onTap: () => print('Comment'),
+              label: 'Comment', onTap: () => print('Comment'),
             ),
+
             _PostButton(
               icon: Icon(
                 MdiIcons.shareOutline,

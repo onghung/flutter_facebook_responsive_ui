@@ -34,6 +34,7 @@ class CustomTabBar extends StatelessWidget {
                 ),
               ),
       ),
+
       tabs: icons
           .asMap()
           .map((i, e) => MapEntry(
